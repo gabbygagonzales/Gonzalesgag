@@ -1,0 +1,21 @@
+/* Make the background black and text white for readability */
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Center the image and other contents inside the main tag */
+main {
+  text-align: center;
+}
+
+/* Ensure the image behaves nicely */
+img {
+  display: block;
+  margin: 20px auto; /* Centers the image if it's a block element */
+  max-width: 100%;
+  height: auto;
+}
