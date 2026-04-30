@@ -12,6 +12,9 @@
 
   <!-- Link to your CSS file -->
   <link rel="stylesheet" href="gonzalesgag.css">
+  
+  <!-- Add the script to view 3D Models -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -32,7 +35,18 @@
     </section>
 
     <img src="images/final.png" alt="A brief description of your image" width="500">
-<img>
+
+    <section class="3d-viewer-window" style="margin-top: 2rem;">
+      <h2>Interactive 3D Render</h2>
+      <!-- To display your 3D model, change 'src' to point to your .glb or .gltf file -->
+      <model-viewer 
+        src="models/your-model.glb" 
+        alt="A 3D render of my project" 
+        auto-rotate 
+        camera-controls 
+        style="width: 100%; height: 500px; background-color: #fce4ec; border-radius: 15px; border: 2px solid #ff4081;">
+      </model-viewer>
+    </section>
 
   </main>
 
