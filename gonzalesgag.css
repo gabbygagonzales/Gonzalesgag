@@ -6,10 +6,10 @@ body {
   /* Overlapping repeating radial gradients create a mesmerizing Moiré interference pattern
      that looks like intricate, dotted fractal waves */
   background-image:
-    repeating-radial-gradient( circle at 0 0, transparent 0, #000 10px, transparent 10px, rgba(255, 255, 255, 0.6) 20px ),
-    repeating-radial-gradient( circle at 100% 100%, transparent 0, #000 10px, transparent 10px, rgba(255, 255, 255, 0.6) 20px ),
-    repeating-radial-gradient( circle at 100% 0, transparent 0, transparent 20px, rgba(255, 255, 255, 0.3) 20px, rgba(255, 255, 255, 0.3) 30px ),
-    repeating-radial-gradient( circle at 0 100%, transparent 0, transparent 20px, rgba(255, 255, 255, 0.3) 20px, rgba(255, 255, 255, 0.3) 30px );
+    repeating-radial-gradient(circle at 0 0, transparent 0, #000 10px, transparent 10px, rgba(255, 255, 255, 0.6) 20px),
+    repeating-radial-gradient(circle at 100% 100%, transparent 0, #000 10px, transparent 10px, rgba(255, 255, 255, 0.6) 20px),
+    repeating-radial-gradient(circle at 100% 0, transparent 0, transparent 20px, rgba(255, 255, 255, 0.3) 20px, rgba(255, 255, 255, 0.3) 30px),
+    repeating-radial-gradient(circle at 0 100%, transparent 0, transparent 20px, rgba(255, 255, 255, 0.3) 20px, rgba(255, 255, 255, 0.3) 30px);
 
   background-size: 90px 90px;
   color: #ffffff;
@@ -32,7 +32,8 @@ img {
 
   /* The white background surrounding the image itself */
   background-color: #ffffff;
-  padding: 24px; /* Adds space around the image so the white background is visible */
+  padding: 24px;
+  /* Adds space around the image so the white background is visible */
 
   /* Subtle styling to help it pop beautifully against the complex background */
   border-radius: 12px;
@@ -43,9 +44,11 @@ img {
 }
 
 /* Enhance text legibility over the busy, dotted wave background! */
-section, nav {
+section,
+nav {
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  backdrop-filter: blur(10px);
+  /* Frosted glass effect */
   padding: 30px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
