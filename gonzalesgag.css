@@ -64,6 +64,8 @@ nav {
   margin-bottom: 50px;
   flex-wrap: wrap;
   position: relative;
+  /* A more aggressive mask that starts fading earlier */
+  mask-image: linear-gradient(to right, transparent, black 250px, black calc(100% - 250px), transparent);
 }
 
 .nav-buttons::before,
@@ -71,22 +73,24 @@ nav {
   content: '';
   position: absolute;
   top: 50%;
-  width: 120px;
+  width: 300px; 
   height: 80px;
   background-image: url('halftone-edge.svg');
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 1; /* Full opacity for the dots */
 }
 
 .nav-buttons::before {
-  right: calc(100% - 10px);
+  /* Positioned to heavily overlap the left side */
+  left: -150px; 
   transform: translateY(-50%) scaleX(-1);
 }
 
 .nav-buttons::after {
-  left: calc(100% - 10px);
+  /* Positioned to heavily overlap the right side */
+  right: -150px;
   transform: translateY(-50%);
 }
 
