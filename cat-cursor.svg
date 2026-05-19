@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    #tail {
+      transform-origin: 21px 24px;
+      animation: wag 0.5s infinite ease-in-out alternate;
+    }
+    @keyframes wag {
+      from { transform: rotate(-15deg); }
+      to { transform: rotate(20deg); }
+    }
+  </style>
+  <!-- Body -->
+  <circle cx="16" cy="22" r="6" fill="#000000" />
+  <!-- Head -->
+  <circle cx="16" cy="14" r="5" fill="#000000" />
+  <!-- Ears -->
+  <polygon points="12,11 11,6 15,10" fill="#000000" />
+  <polygon points="20,11 21,6 17,10" fill="#000000" />
+  <!-- Eyes -->
+  <circle cx="14" cy="13" r="0.8" fill="#ffffff" />
+  <circle cx="18" cy="13" r="0.8" fill="#ffffff" />
+  <!-- Tail -->
+  <path id="tail" d="M21,24 Q26,24 28,18" stroke="#000000" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>
