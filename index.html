@@ -19,7 +19,7 @@
 <body>
 
   <!-- Your main content goes here -->
-  <nav class="nav-buttons">
+  <nav class="nav-buttons halftone-box">
     <button id="btn-about" class="jagged-btn btn-about active" onclick="showView('about')">About</button>
     <button id="btn-gallery" class="jagged-btn btn-gallery" onclick="showView('gallery')">Gallery</button>
     <button id="btn-viewer" class="jagged-btn btn-viewer" onclick="showView('viewer')">3D View</button>
@@ -28,7 +28,7 @@
   <main>
 
     <div id="about-view" class="view-content">
-      <section>
+      <section class="halftone-box">
         <h2>About Me</h2>
         <p>This is where I'll add my primary content, projects, or blog posts.</p>
       </section>
@@ -39,7 +39,7 @@
     </div>
 
     <div id="viewer-view" class="view-content hidden-view">
-      <section class="3d-viewer-window">
+      <section class="3d-viewer-window halftone-box">
         <h2>Interactive 3D Render</h2>
         <!-- To display your 3D model, change 'src' to point to your .glb or .gltf file -->
         <model-viewer 

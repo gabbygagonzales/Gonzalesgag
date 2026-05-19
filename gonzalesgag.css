@@ -57,19 +57,14 @@ nav {
 }
 
 /* Navigation Buttons Styles */
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
+.halftone-box {
   position: relative;
   /* A more aggressive mask that starts fading earlier */
   mask-image: linear-gradient(to right, transparent, black 250px, black calc(100% - 250px), transparent);
 }
 
-.nav-buttons::before,
-.nav-buttons::after {
+.halftone-box::before,
+.halftone-box::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -79,19 +74,26 @@ nav {
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
-  opacity: 1; /* Full opacity for the dots */
+  opacity: 1;
+  z-index: 10;
 }
 
-.nav-buttons::before {
-  /* Positioned to heavily overlap the left side */
+.halftone-box::before {
   left: -150px; 
   transform: translateY(-50%) scaleX(-1);
 }
 
-.nav-buttons::after {
-  /* Positioned to heavily overlap the right side */
+.halftone-box::after {
   right: -150px;
   transform: translateY(-50%);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
 .jagged-btn {
