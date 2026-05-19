@@ -54,3 +54,58 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 20px;
 }
+
+/* Navigation Buttons Styles */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.jagged-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+.btn-about {
+  clip-path: polygon(0% 15%, 25% 0%, 100% 12%, 88% 85%, 15% 100%, 5% 70%);
+}
+
+.btn-gallery {
+  clip-path: polygon(12% 0%, 95% 8%, 100% 40%, 82% 95%, 10% 100%, 0% 35%);
+}
+
+.btn-viewer {
+  clip-path: polygon(5% 25%, 35% 0%, 100% 18%, 92% 82%, 45% 100%, 0% 75%);
+}
+
+.jagged-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1) rotate(3deg);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.jagged-btn.active {
+  background: #ff4081;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 64, 129, 0.6);
+  border: none;
+}
+
+.hidden-view {
+  display: none !important;
+}
