@@ -63,6 +63,32 @@ nav {
   gap: 25px;
   margin-bottom: 50px;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.nav-buttons::before,
+.nav-buttons::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  height: 80px;
+  background-image: url('halftone-edge.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.nav-buttons::before {
+  right: calc(100% - 10px);
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.nav-buttons::after {
+  left: calc(100% - 10px);
+  transform: translateY(-50%);
 }
 
 .jagged-btn {
