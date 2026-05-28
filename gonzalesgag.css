@@ -64,17 +64,29 @@ header {
 
 .main-header {
   margin: 0 auto 30px;
-  max-width: 800px;
+  max-width: 100%;
   text-align: center;
 }
 
 .main-header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.main-header.halftone-box {
+  mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+}
+
+.main-header.halftone-box::before {
+  content: none;
+}
+
+.main-header.halftone-box::after {
+  content: none;
 }
 
 /* Navigation Buttons Styles */
