@@ -108,7 +108,22 @@ header {
   width: 100%;
   margin-bottom: 20px;
 }
+<div id="gallery-view" class="view-content hidden-view">
 
+  <section class="halftone-box">
+    <h2>Project Drafts</h2>
+    <p>Click on any draft thumbnail to expand it!</p>
+
+    <div class="drafts-container">
+
+      <button class="image-btn" onclick="toggleExpand(this)">
+        <img src="draft 1-01.tif" alt="Draft 1 Thumbnail">
+      </button>
+
+      </div>
+  </section>
+
+</div>
 .side-header h1 {
   margin: 0;
   font-size: 1.5rem;
