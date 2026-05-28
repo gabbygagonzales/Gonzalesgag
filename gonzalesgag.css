@@ -45,8 +45,10 @@ img {
 }
 
 .gallery-image {
-  margin-left: 0;
-  margin-right: auto;
+  width: 500px; /* Kept fixed width as before unless I want to change it */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
 /* Enhance text legibility over the busy, dotted wave background! */
@@ -89,7 +91,73 @@ header {
   content: none;
 }
 
-/* Navigation Buttons Styles */
+/* Gallery Layout and Sidebar */
+.gallery-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.drafts-section {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.side-header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.side-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.side-header.halftone-box::before,
+.side-header.halftone-box::after {
+  content: none;
+}
+
+.side-header.halftone-box {
+  mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+}
+
+.proposal-box {
+  background-color: #fce4ec;
+  color: #000000;
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.proposal-box h2 {
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.proposal-box p {
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.proposal-box.halftone-box {
+  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
+}
+
+.proposal-box.halftone-box::before,
+.proposal-box.halftone-box::after {
+  content: none;
+}
 .halftone-box {
   position: relative;
   /* A more conservative mask that leaves room for wide titles */
