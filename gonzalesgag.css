@@ -44,6 +44,11 @@ img {
   height: auto;
 }
 
+.gallery-image {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 /* Enhance text legibility over the busy, dotted wave background! */
 section,
 nav {
