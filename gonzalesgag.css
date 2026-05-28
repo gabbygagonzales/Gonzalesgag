@@ -116,12 +116,14 @@ header {
 
     <div class="drafts-container">
 
-      <button class="image-btn" onclick="toggleExpand(this)">
-        <img src="draft 1-01.tif" alt="Draft 1 Thumbnail">
+      <button class="draft 1-01.tif" onclick="toggleExpand(this)">
+        <img src="images/final.png" alt="Draft 1 Thumbnail">
       </button>
 
       </div>
   </section>
+
+</div>
 
 </div>
 .side-header h1 {
