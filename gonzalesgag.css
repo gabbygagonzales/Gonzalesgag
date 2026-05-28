@@ -169,7 +169,7 @@ header {
   content: '';
   position: absolute;
   top: 50%;
-  width: 300px; 
+  width: 300px;
   height: 80px;
   background-image: url('halftone-edge.svg');
   background-size: contain;
@@ -180,7 +180,7 @@ header {
 }
 
 .halftone-box::before {
-  left: -150px; 
+  left: -150px;
   transform: translateY(-50%) scaleX(-1);
 }
 
@@ -239,6 +239,22 @@ header {
   border: none;
 }
 
+.hidden-view {
+  display: none !important;
+}
+
+/* Container for managing height, scrolling, and the smooth edge fading */
+.proposal-text-container {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 15px 5px;
+
+  /* Applies a transparency map mask onto the top and bottom of the container */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+/* Fallback: Ensure elements with this class stay completely hidden until clicked */
 .hidden-view {
   display: none !important;
 }
