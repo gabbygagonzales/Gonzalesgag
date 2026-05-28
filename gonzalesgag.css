@@ -51,7 +51,8 @@ img {
 
 /* Enhance text legibility over the busy, dotted wave background! */
 section,
-nav {
+nav,
+header {
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   /* Frosted glass effect */
@@ -61,11 +62,26 @@ nav {
   margin-bottom: 20px;
 }
 
+.main-header {
+  margin: 0 auto 30px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 /* Navigation Buttons Styles */
 .halftone-box {
   position: relative;
-  /* A more aggressive mask that starts fading earlier */
-  mask-image: linear-gradient(to right, transparent, black 250px, black calc(100% - 250px), transparent);
+  /* A more conservative mask that leaves room for wide titles */
+  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
 }
 
 .halftone-box::before,
