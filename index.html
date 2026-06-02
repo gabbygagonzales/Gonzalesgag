@@ -1,4 +1,3 @@
-@ -1,89 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,52 +36,52 @@
 
     <div id="gallery-view" class="view-content hidden-view">
       <img src="images/final.png" alt="A brief description of your image" width="500" class="gallery-image">
-    </div>
+ </div>
 
-    <div id="viewer-view" class="view-content hidden-view">
-      <section class="3d-viewer-window halftone-box">
-        <h2>Interactive 3D Render</h2>
-        <!-- To display your 3D model, change 'src' to point to your .glb or .gltf file -->
-        <model-viewer
-          src="gallery.glb"
-          alt="A 3D render of my project"
-          auto-rotate
-          camera-controls
-          style="width: 100%; height: 500px; background-color: #fce4ec; border-radius: 15px; border: 2px solid #ff4081;">
-        </model-viewer>
-      </section>
-    </div>
+ <div id="viewer-view" class="view-content hidden-view">
+   <section class="3d-viewer-window halftone-box">
+     <h2>Interactive 3D Render</h2>
+     <!-- To display your 3D model, change 'src' to point to your .glb or .gltf file -->
+     <model-viewer
+       src="gallery.glb"
+       alt="A 3D render of my project"
+       auto-rotate
+       camera-controls
+       style="width: 100%; height: 500px; background-color: #fce4ec; border-radius: 15px; border: 2px solid #ff4081;">
+     </model-viewer>
+   </section>
+ </div>
 
-  </main>
+</main>
 
-  <footer>
-    <p>&copy; 2026 My Name. Hosted on GitHub Pages.</p>
-  </footer>
+<footer>
+ <p>&copy; 2026 My Name. Hosted on GitHub Pages.</p>
+</footer>
 
-  <script>
-    function showView(viewId) {
-      // Hide all views
-      document.querySelectorAll('.view-content').forEach(view => {
-        view.classList.add('hidden-view');
-      });
-      // Deactivate all buttons
-      document.querySelectorAll('.jagged-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
+<script>
+ function showView(viewId) {
+   // Hide all views
+   document.querySelectorAll('.view-content').forEach(view => {
+     view.classList.add('hidden-view');
+   });
+   // Deactivate all buttons
+   document.querySelectorAll('.jagged-btn').forEach(btn => {
+     btn.classList.remove('active');
+   });
 
-      // Show selected view
-      const selectedView = document.getElementById(viewId + '-view');
-      if (selectedView) {
-        selectedView.classList.remove('hidden-view');
-      }
+   // Show selected view
+   const selectedView = document.getElementById(viewId + '-view');
+   if (selectedView) {
+     selectedView.classList.remove('hidden-view');
+   }
 
-      // Activate corresponding button
-      const activeBtn = document.querySelector('.btn-' + viewId);
-      if (activeBtn) {
-        activeBtn.classList.add('active');
-      }
-    }
-  </script>
+   // Activate corresponding button
+   const activeBtn = document.querySelector('.btn-' + viewId);
+   if (activeBtn) {
+     activeBtn.classList.add('active');
+   }
+ }
+</script>
 
 </body>
 

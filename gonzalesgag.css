@@ -1,5 +1,3 @@
-@ -1,71 +1,87 @@
-/* The overall black and white fractal dotted wave pattern effect */
 body {
   /* Set the base color to black */
   background-color: #000000;
@@ -53,30 +51,97 @@ img {
 /* Enhance text legibility over the busy, dotted wave background! */
 section,
 nav {
-<<<<<<< HEAD
-nav,
-header {
-=======
->>>>>>> parent of 8d0548b (update)
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  /* Frosted glass effect */
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 20px;
+backdrop-filter: blur(10px);
+/* Frosted glass effect */
+padding: 30px;
+border-radius: 16px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+margin-bottom: 20px;
 }
 
 /* Navigation Buttons Styles */
 .halftone-box {
-  position: relative;
-  /* A more aggressive mask that starts fading earlier */
-  mask-image: linear-gradient(to right, transparent, black 250px, black calc(100% - 250px), transparent);
-<<<<<<< HEAD
-  /* A more conservative mask that leaves room for wide titles */
-  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
-=======
->>>>>>> parent of 8d0548b (update)
+position: relative;
+/* A more aggressive mask that starts fading earlier */
+mask-image: linear-gradient(to right, transparent, black 250px, black calc(100% - 250px), transparent);
 }
 
 .halftone-box::before,
+.halftone-box::after {
+content: '';
+position: absolute;
+top: 50%;
+width: 300px;
+height: 80px;
+background-image: url('halftone-edge.svg');
+background-size: contain;
+background-repeat: no-repeat;
+pointer-events: none;
+opacity: 1;
+z-index: 10;
+}
+
+.halftone-box::before {
+left: -150px;
+transform: translateY(-50%) scaleX(-1);
+}
+
+.halftone-box::after {
+right: -150px;
+transform: translateY(-50%);
+}
+
+.nav-buttons {
+display: flex;
+justify-content: center;
+gap: 25px;
+margin-bottom: 50px;
+flex-wrap: wrap;
+}
+
+.jagged-btn {
+background: rgba(255, 255, 255, 0.05);
+color: #fff;
+border: 1px solid rgba(255, 255, 255, 0.1);
+padding: 20px 40px;
+font-size: 1.2rem;
+font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 2px;
+cursor: url('cat-cursor.svg') 16 16, auto;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+backdrop-filter: blur(8px);
+position: relative;
+}
+
+.btn-about {
+clip-path: polygon(0% 15%, 25% 0%, 100% 12%, 88% 85%, 15% 100%, 5% 70%);
+}
+
+.btn-gallery {
+clip-path: polygon(12% 0%, 95% 8%, 100% 40%, 82% 95%, 10% 100%, 0% 35%);
+}
+
+.btn-viewer {
+clip-path: polygon(5% 25%, 35% 0%, 100% 18%, 92% 82%, 45% 100%, 0% 75%);
+}
+
+.jagged-btn:hover {
+background: rgba(255, 255, 255, 0.2);
+transform: scale(1.1) rotate(3deg);
+border-color: rgba(255, 255, 255, 0.5);
+box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.jagged-btn.active {
+background: #ff4081;
+color: #000;
+transform: scale(1.05);
+box-shadow: 0 0 40px rgba(255, 64, 129, 0.6);
+border: none;
+}
+
+.hidden-view {
+display: none !important;
+}
