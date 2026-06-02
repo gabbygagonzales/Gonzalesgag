@@ -1,4 +1,4 @@
-@ -1,60 +1,63 @@
+@ -1,89 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,3 +61,32 @@
   <footer>
     <p>&copy; 2026 My Name. Hosted on GitHub Pages.</p>
   </footer>
+
+  <script>
+    function showView(viewId) {
+      // Hide all views
+      document.querySelectorAll('.view-content').forEach(view => {
+        view.classList.add('hidden-view');
+      });
+      // Deactivate all buttons
+      document.querySelectorAll('.jagged-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Show selected view
+      const selectedView = document.getElementById(viewId + '-view');
+      if (selectedView) {
+        selectedView.classList.remove('hidden-view');
+      }
+
+      // Activate corresponding button
+      const activeBtn = document.querySelector('.btn-' + viewId);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+
+</html>
