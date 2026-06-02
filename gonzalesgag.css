@@ -1,3 +1,4 @@
+@ -1,71 +1,87 @@
 /* The overall black and white fractal dotted wave pattern effect */
 body {
   /* Set the base color to black */
@@ -52,6 +53,8 @@ img {
 /* Enhance text legibility over the busy, dotted wave background! */
 section,
 nav {
+nav,
+header {
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   /* Frosted glass effect */
@@ -61,246 +64,28 @@ nav {
   margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 .main-header {
   margin: 0 auto 30px;
-  max-width: 100%;
+  max-width: 800px;
   text-align: center;
 }
 
 .main-header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
 }
 
-.main-header.halftone-box {
-  mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
-}
-
-.main-header.halftone-box::before {
-  content: none;
-}
-
-.main-header.halftone-box::after {
-  content: none;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Gallery Layout and Sidebar */
-.gallery-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  width: 100%;
-}
-
-.drafts-section {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.side-header {
-  width: 100%;
-  margin-bottom: 20px;
-}
-<div id="gallery-view" class="view-content hidden-view">
-
-  <section class="halftone-box">
-    <h2>Project Drafts</h2>
-    <p>Click on any draft thumbnail to expand it!</p>
-
-    <div class="drafts-container">
-
-      <button class="image-btn" onclick="toggleExpand(this)">
-        <img src="images/final.png" alt="Draft 1 Thumbnail">
-      </button>
-
-      </div>
-  </section>
-
-</div>
-
-</div>
-.side-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.side-header.halftone-box::before,
-.side-header.halftone-box::after {
-  content: none;
-}
-
-.side-header.halftone-box {
-  mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
-}
-
-.proposal-box {
-  background-color: #fce4ec;
-  color: #000000;
-  margin-top: 40px;
-  padding: 40px;
-  border-radius: 15px;
-  text-align: left;
-  line-height: 1.6;
-}
-
-.proposal-box h2 {
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.proposal-box p {
-  color: #000000;
-  margin-bottom: 15px;
-}
-
-.proposal-box.halftone-box {
-  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
-}
-
-.proposal-box.halftone-box::before,
-.proposal-box.halftone-box::after {
-  content: none;
-}
-=======
-=======
->>>>>>> parent of 8d0548b (update)
 /* Navigation Buttons Styles */
->>>>>>> parent of 778f57d (update)
-=======
-/* Navigation Buttons Styles */
->>>>>>> parent of 778f57d (update)
-=======
-/* Navigation Buttons Styles */
->>>>>>> parent of 778f57d (update)
 .halftone-box {
   position: relative;
   /* A more aggressive mask that starts fading earlier */
   mask-image: linear-gradient(to right, transparent, black 250px, black calc(100% - 250px), transparent);
+  /* A more conservative mask that leaves room for wide titles */
+  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
 }
 
 .halftone-box::before,
-.halftone-box::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 300px;
-  height: 80px;
-  background-image: url('halftone-edge.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  opacity: 1;
-  z-index: 10;
-}
-
-.halftone-box::before {
-  left: -150px;
-  transform: translateY(-50%) scaleX(-1);
-}
-
-.halftone-box::after {
-  right: -150px;
-  transform: translateY(-50%);
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-}
-
-.jagged-btn {
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px 40px;
-  font-size: 1.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: url('cat-cursor.svg') 16 16, auto;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  backdrop-filter: blur(8px);
-  position: relative;
-}
-
-.btn-about {
-  clip-path: polygon(0% 15%, 25% 0%, 100% 12%, 88% 85%, 15% 100%, 5% 70%);
-}
-
-.btn-gallery {
-  clip-path: polygon(12% 0%, 95% 8%, 100% 40%, 82% 95%, 10% 100%, 0% 35%);
-}
-
-.btn-viewer {
-  clip-path: polygon(5% 25%, 35% 0%, 100% 18%, 92% 82%, 45% 100%, 0% 75%);
-}
-
-.jagged-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1) rotate(3deg);
-  border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-}
-
-.jagged-btn.active {
-  background: #ff4081;
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(255, 64, 129, 0.6);
-  border: none;
-}
-
-.hidden-view {
-  display: none !important;
-}
-
-/* Container for managing height, scrolling, and the smooth edge fading */
-.proposal-text-container {
-  max-height: 250px;
-  overflow-y: auto;
-  padding: 15px 5px;
-
-  /* Applies a transparency map mask onto the top and bottom of the container */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
-}
-.proposal-box.halftone-box {
-  /* Control the box sizing and enable scrolling */
-  max-height: 300px;
-  overflow-y: auto;
-  padding: 30px 30px; /* Gives padding on all sides so text doesn't start instantly hidden */
-
-  /* Webkit support (Safari / Chrome / Edge) */
-  -webkit-mask-image:
-    linear-gradient(to bottom, transparent, black 40px, black calc(100% - 40px), transparent),
-    linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
-  -webkit-mask-composite: source-in; /* Tells the browser to only show where both gradients overlap */
-
-  /* Standard support (Firefox / Modern Browsers) */
-  mask-image:
-    linear-gradient(to bottom, transparent, black 40px, black calc(100% - 40px), transparent),
-    linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
-  mask-composite: intersect; /* Intersects both masks to create a 4-sided vignette fade */
-}
-/* Fallback: Ensure elements with this class stay completely hidden until clicked */
-.hidden-view {
-  display: none !important;
-}
