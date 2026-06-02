@@ -90,7 +90,6 @@ header {
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 /* Gallery Layout and Sidebar */
 .gallery-container {
   display: flex;
@@ -175,9 +174,6 @@ header {
 .proposal-box.halftone-box::after {
   content: none;
 }
-=======
-/* Navigation Buttons Styles */
->>>>>>> parent of 778f57d (update)
 =======
 /* Navigation Buttons Styles */
 >>>>>>> parent of 778f57d (update)
