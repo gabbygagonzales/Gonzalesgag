@@ -272,7 +272,24 @@ header {
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
 }
+.proposal-box.halftone-box {
+  /* Control the box sizing and enable scrolling */
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 30px 30px; /* Gives padding on all sides so text doesn't start instantly hidden */
 
+  /* Webkit support (Safari / Chrome / Edge) */
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent, black 40px, black calc(100% - 40px), transparent),
+    linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+  -webkit-mask-composite: source-in; /* Tells the browser to only show where both gradients overlap */
+
+  /* Standard support (Firefox / Modern Browsers) */
+  mask-image:
+    linear-gradient(to bottom, transparent, black 40px, black calc(100% - 40px), transparent),
+    linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+  mask-composite: intersect; /* Intersects both masks to create a 4-sided vignette fade */
+}
 /* Fallback: Ensure elements with this class stay completely hidden until clicked */
 .hidden-view {
   display: none !important;
