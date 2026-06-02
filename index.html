@@ -12,7 +12,7 @@
 
   <!-- Link to your CSS file -->
   <link rel="stylesheet" href="gonzalesgag.css">
-  
+
   <!-- Add the script to view 3D Models -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
@@ -30,20 +30,15 @@
     <div id="about-view" class="view-content">
       <section class="halftone-box">
         <h2>About Me</h2>
-        <p>This is where I'll add my primary content, projects, or blog posts.</p>
+        <p></p>
       </section>
     </div>
 
     <div id="gallery-view" class="view-content hidden-view">
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <img src="images/final.png" alt="A brief description of your image" width="500">
-=======
       <header class="main-header halftone-box">
         <h1>10C Assignment 1: Large Format Print</h1>
       </header>
       <img src="images/final.png" alt="A brief description of your image" width="500" class="gallery-image">
->>>>>>> parent of 778f57d (update)
     </div>
     <div id="gallery-view" class="view-content hidden-view">
 
@@ -60,36 +55,16 @@
           </div>
       </section>
 
-=======
-      <header class="main-header halftone-box">
-        <h1>10C Assignment 1: Large Format Print</h1>
-      </header>
-      <div class="gallery-container">
-      <img src="images/final.png" alt="10C Assignment 1: Large Format Print - Final Work" class="gallery-image">
-      <div class="drafts-section">
-        <header class="side-header halftone-box">
-          <h1>Drafts</h1>
-        </header>
-      </div>
     </div>
-    
-    <section class="proposal-box halftone-box">
-      <h2>Proposal</h2>
-      <p>The heartbeat creates sound waves. The pattern of the heartbeat, if healthy, can be considered mathematically a fractal. The illustration of the wave forms of the harmonic series also kind of reminds me of a fractal (I don't think it mathematically is but it reminded me of one). Fractals are proven to be soothing to the human body, our nervous system naturally calms down when gazing upon images of them. There is a proposition in the music theory book about this particular healing effect in the form of sound waves of the harmonic series. The proper harmony alignment promotes harmony in the human body. To some, there is an innate human proclivity to be attracted to these patterns, be it visually or through sound-perhaps the fractality of our heartbeat gives us an innate drive to find this or create this kind of pattern in our reality. I propose that patterns and fractals of sound and vision are humans’ instinctive way of expressing the need to find homeostasis within the body and within consciousness. Like an instinctive search for balance, which is why we feel soothed when looking at/hearing these things.</p>
-      <p>I’m trying to visually establish a relationship between humankind and these concepts using the images presented in these textbooks.</p>
-    </section>
->>>>>>> parent of 61aa5e9 (Update index.html)
-    </div>
-
     <div id="viewer-view" class="view-content hidden-view">
       <section class="3d-viewer-window halftone-box">
         <h2>Interactive 3D Render</h2>
         <!-- To display your 3D model, change 'src' to point to your .glb or .gltf file -->
-        <model-viewer 
-          src="gallery.glb" 
-          alt="A 3D render of my project" 
-          auto-rotate 
-          camera-controls 
+        <model-viewer
+          src="gallery.glb"
+          alt="A 3D render of my project"
+          auto-rotate
+          camera-controls
           style="width: 100%; height: 500px; background-color: #fce4ec; border-radius: 15px; border: 2px solid #ff4081;">
         </model-viewer>
       </section>
@@ -98,7 +73,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 My Name. Hosted on GitHub Pages.</p>
+    <p></p>
   </footer>
 
   <script>
@@ -111,13 +86,13 @@
       document.querySelectorAll('.jagged-btn').forEach(btn => {
         btn.classList.remove('active');
       });
-      
+
       // Show selected view
       const selectedView = document.getElementById(viewId + '-view');
       if (selectedView) {
         selectedView.classList.remove('hidden-view');
       }
-      
+
       // Activate corresponding button
       const activeBtn = document.querySelector('.btn-' + viewId);
       if (activeBtn) {
@@ -130,57 +105,4 @@
 
 </html>
 
-<div class="drafts-container">
-
-  <button class="draft 1-01.tif" onclick="toggleExpand(this)">
-    <img src="images/final.png" alt="Draft 1 Thumbnail">
-  </button>
-
-  </div>
-</section>
-
-</div>
-<div id="viewer-view" class="view-content hidden-view">
-<section class="3d-viewer-window halftone-box">
-<h2>Interactive 3D Render</h2>
-<!-- To display your 3D model, change 'src' to point to your .glb or .gltf file -->
-<model-viewer
-  src="gallery.glb"
-  alt="A 3D render of my project"
-  auto-rotate
-  camera-controls
-<model-viewer
-  src="gallery.glb"
-  alt="A 3D render of my project"
-  auto-rotate
-  camera-controls
-  style="width: 100%; height: 500px; background-color: #fce4ec; border-radius: 15px; border: 2px solid #ff4081;">
-</model-viewer>
-</section>
-
-@@ -71,7 +70,7 @@
-</main>
-
-<footer>
-<p>&copy; 2026 My Name. Hosted on GitHub Pages.</p>
-<p></p>
-</footer>
-
-<script>
-
-@@ -84,13 +83,13 @@
-document.querySelectorAll('.jagged-btn').forEach(btn => {
-btn.classList.remove('active');
-});
-
-
-// Show selected view
-const selectedView = document.getElementById(viewId + '-view');
-if (selectedView) {
-selectedView.classList.remove('hidden-view');
-}
-
-
-// Activate corresponding button
-const activeBtn = document.querySelector('.btn-' + viewId);
-if (activeBtn) {
+<
