@@ -107,35 +107,22 @@ header {
   width: 100%;
   margin-bottom: 20px;
 }
-overflow: hidden;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+<div id="gallery-view" class="view-content hidden-view">
 
-/* Thumbnail sizing (Modify width/height to fit your design) */
-.image-btn img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover; /* Keeps image square without distorting */
-  border: 2px solid #ff4081;
-  border-radius: 8px;
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
+  <section class="halftone-box">
+    <h2>Project Drafts</h2>
+    <p>Click on any draft thumbnail to expand it!</p>
 
-/* Subtle hover pop effect before clicking */
-.image-btn:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
-}
+    <div class="drafts-container">
 
-/* The Expanded Class (Triggers via JavaScript) */
-.image-btn.expanded img {
-  width: 100%;        /* Takes up full width available */
-  max-width: 600px;   /* Prevents it from becoming too massive */
-  height: auto;       /* Restores natural image proportions */
-  object-fit: contain;
-  border-color: #00e5ff; /* Optional: Change color when active */
-}
+      <button class="image-btn" onclick="toggleExpand(this)">
+        <img src="images/final.png" alt="Draft 1 Thumbnail">
+      </button>
+
+      </div>
+  </section>
+
+</div>
 
 </div>
 .side-header h1 {
