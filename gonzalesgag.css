@@ -161,35 +161,40 @@ display: none !important;
 .gallery-blurb {
   width: 100%;
   box-sizing: border-box;
-  text-align: center; /* Centers the text */
+  text-align: center; /* Centers the text perfectly */
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 20px;
 
-  /* REMOVES the fading effect so text is completely readable */
-  mask-image: none !important;
-  -webkit-mask-image: none !important;
+  /* Baby pink background with subtle transparency */
+  background-color: rgba(252, 228, 236, 0.92) !important;
+  color: #000000; /* Dark text for ultimate readability on pink */
 
-  /* Matches your 3D view container's styling (with a tiny opacity boost for readability) */
-  background-color: rgba(252, 228, 236, 0.95) !important;
-  border: 2px solid #ff4081 !important; /* Bright pink border */
-  border-radius: 15px;
-  color: #000000; /* Dark text for readability on light pink */
+  /* Creates a seamless, fading, frosted perimeter glow on all 4 sides */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 64, 129, 0.4);
+  box-shadow: 0 0 25px 5px rgba(255, 64, 129, 0.25),
+              inset 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
-/* Changes the text color of headings inside this specific box to match your style */
+/* Enhances readability of the body text inside the pink box */
 .gallery-blurb p {
-  color: #000000;
+  color: #000000 !important;
   margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
 }
 
-/* Creates the scrollable constraint */
+/* Creates the scrollable constraint window */
 .gallery-blurb .scroll-content {
-  max-height: 150px; /* Adjust this number to make the box taller or shorter */
-  overflow-y: auto;  /* Adds a vertical scrollbar only when content overflows */
-  padding-right: 10px; /* Space so text doesn't hug the scrollbar */
+  max-height: 200px; /* Slightly taller to comfortably show your deep concept note */
+  overflow-y: auto;  /* Adds vertical scrollbar when needed */
+  padding-right: 15px;
 }
 
-/* Custom scrollbar styling to make it look clean inside the pink box */
+/* Custom crisp pink scrollbar styling */
 .gallery-blurb .scroll-content::-webkit-scrollbar {
   width: 8px;
 }
