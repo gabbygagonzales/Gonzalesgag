@@ -53,8 +53,8 @@ img {
 #gallery-view .halftone-box {
   width: 100%;
   box-sizing: border-box;
-  text-align: left;
-}
+  text-align: center;       /* This centers the text inside the box */
+  }
 
 .gallery-image {
   margin: 20px auto 40px 0 !important;
