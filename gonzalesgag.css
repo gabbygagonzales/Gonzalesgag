@@ -163,8 +163,12 @@ display: none !important;
   box-sizing: border-box;
   text-align: center; /* Centers the text */
 
-  /* Matches your 3D view container's styling */
-  background-color: rgba(252, 228, 236, 0.85) !important; /* Baby pink with frosted opacity */
+  /* REMOVES the fading effect so text is completely readable */
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+
+  /* Matches your 3D view container's styling (with a tiny opacity boost for readability) */
+  background-color: rgba(252, 228, 236, 0.95) !important;
   border: 2px solid #ff4081 !important; /* Bright pink border */
   border-radius: 15px;
   color: #000000; /* Dark text for readability on light pink */
