@@ -43,9 +43,21 @@ img {
   height: auto;
 }
 
+#gallery-view {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#gallery-view .halftone-box {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
 .gallery-image {
-  margin-left: 0;
-  margin-right: auto;
+  margin: 20px auto 40px 0 !important;
 }
 
 /* Enhance text legibility over the busy, dotted wave background! */
