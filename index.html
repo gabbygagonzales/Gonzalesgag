@@ -5,20 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A brief description of my shiny new GitHub page">
 
-  <!-- Add a custom icon if you have one -->
-  <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
-
   <title>GONZALESGAG</title>
 
-  <!-- Link to your CSS file -->
   <link rel="stylesheet" href="gonzalesgag.css">
 
-  <!-- Add the script to view 3D Models -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
 
-  <!-- Your main content goes here -->
   <nav class="nav-buttons halftone-box">
     <button id="btn-about" class="jagged-btn btn-about active" onclick="showView('about')">About</button>
     <button id="btn-gallery" class="jagged-btn btn-gallery" onclick="showView('gallery')">Gallery</button>
@@ -35,65 +29,79 @@
     </div>
 
     <div id="gallery-view" class="view-content hidden-view">
-          <section class="halftone-box">
-            <h2>10C Assignment 1: Large Format Print</h2>
-          </section>
+      <section class="halftone-box">
+        <h2>10C Assignment 1: Large Format Print</h2>
+      </section>
 
-          <img src="images/final.png" alt="A brief description of your image" width="500" class="gallery-image">
+      <img src="images/final.png" alt="A brief description of your image" width="500" class="gallery-image">
 
-          <section class="gallery-blurb">
-            <div class="scroll-content">
-              <p>The heartbeat creates sound waves. The pattern of the heartbeat, if healthy, can be considered mathematically a fractal. The illustration of the wave forms of the harmonic series also kind of reminds me of a fractal (I dont think it mathematically is but it reminded me of one). Fractals are proven to be soothing to the human body, our nervous system naturally calms down when gazing upon images of them. There is a proposition in the music theory book about this particular healing effect in the form of sound waves of the harmonic series. The proper harmony alignment promotes harmony in the human body. To some, there is an innate human proclivity to be attracted to these patterns, be it visually or through sound-perhaps the fractality of our heartbeat gives us an innate drive to find this or create this kind of pattern in our reality. I propose that patterns and fractals of sound and vision are humans’ instinctive way of expressing the need to find homeostasis within the body and within consciousness. Like an instinctive search for balance, which is why we feel soothed when looking at/hearing these things.</p>
-              <p style="margin-top: 15px; font-style: italic; opacity: 0.85;">I’m trying to visually establish a relationship between humankind and these concepts using the images presented in these textbooks. Perhaps in conjunction with blurbs of text hinting at this relationship.</p>
-            </div>
-          </section>
+      <section class="gallery-blurb">
+        <div class="scroll-content">
+          <p>The heartbeat creates sound waves. The pattern of the heartbeat, if healthy, can be considered mathematically a fractal. The illustration of the wave forms of the harmonic series also kind of reminds me of a fractal (I dont think it mathematically is but it reminded me of one). Fractals are proven to be soothing to the human body, our nervous system naturally calms down when gazing upon images of them. There is a proposition in the music theory book about this particular healing effect in the form of sound waves of the harmonic series. The proper harmony alignment promotes harmony in the human body. To some, there is an innate human proclivity to be attracted to these patterns, be it visually or through sound-perhaps the fractality of our heartbeat gives us an innate drive to find this or create this kind of pattern in our reality. I propose that patterns and fractals of sound and vision are humans’ instinctive way of expressing the need to find homeostasis within the body and within consciousness. Like an instinctive search for balance, which is why we feel soothed when looking at/hearing these things.</p>
+          <p style="margin-top: 15px; font-style: italic; opacity: 0.85;">I’m trying to visually establish a relationship between humankind and these concepts using the images presented in these textbooks. Perhaps in conjunction with blurbs of text hinting at this relationship.</p>
         </div>
+      </section>
+    </div>
 
- <div id="viewer-view" class="view-content hidden-view">
-   <section class="3d-viewer-window halftone-box">
-     <h2>Interactive 3D Render</h2>
-     <!-- To display your 3D model, change 'src' to point to your .glb or .gltf file -->
-     <model-viewer
-       src="gallery.glb"
-       alt="A 3D render of my project"
-       auto-rotate
-       camera-controls
-       style="width: 100%; height: 500px; background-color: #fce4ec; border-radius: 15px; border: 2px solid #ff4081;">
-     </model-viewer>
-   </section>
- </div>
+    <div id="viewer-view" class="view-content hidden-view">
+      <section class="viewer-window-3d halftone-box">
+        <h2>Interactive 3D Render</h2>
+        <model-viewer
+          id="lipstick-model"
+          src="gallery.glb"
+          alt="A 3D render of my project"
+          auto-rotate
+          camera-controls
+          interaction-prompt="auto"
+          style="display: block; width: 100%; height: 500px; background-color: #fce4ec; border-radius: 15px; border: 2px solid #ff4081;">
+        </model-viewer>
+      </section>
+    </div>
 
-</main>
+  </main>
 
-<footer>
- <p>&copy; 2026 My Name. Hosted on GitHub Pages.</p>
-</footer>
+  <footer>
+    <p>&copy; 2026 My Name. Hosted on GitHub Pages.</p>
+  </footer>
 
-<script>
- function showView(viewId) {
-   // Hide all views
-   document.querySelectorAll('.view-content').forEach(view => {
-     view.classList.add('hidden-view');
-   });
-   // Deactivate all buttons
-   document.querySelectorAll('.jagged-btn').forEach(btn => {
-     btn.classList.remove('active');
-   });
+  <script>
+    function showView(viewId) {
+      // Hide all views
+      document.querySelectorAll('.view-content').forEach(view => {
+        view.classList.add('hidden-view');
+      });
+      // Deactivate all buttons
+      document.querySelectorAll('.jagged-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
 
-   // Show selected view
-   const selectedView = document.getElementById(viewId + '-view');
-   if (selectedView) {
-     selectedView.classList.remove('hidden-view');
-   }
+      // Show selected view
+      const selectedView = document.getElementById(viewId + '-view');
+      if (selectedView) {
+        selectedView.classList.remove('hidden-view');
+      }
 
-   // Activate corresponding button
-   const activeBtn = document.querySelector('.btn-' + viewId);
-   if (activeBtn) {
-     activeBtn.classList.add('active');
-   }
- }
-</script>
+      // Activate corresponding button
+      const activeBtn = document.querySelector('.btn-' + viewId);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+
+      // FIXED: Force the 3D model engine to recalculate its dimensions
+      // the exact instant its tab changes from hidden to visible
+      if (viewId === 'viewer') {
+        const modelViewer = document.getElementById('lipstick-model');
+        if (modelViewer) {
+          // Tiny timeout gives the CSS layout engine 10 milliseconds to expand the box
+          setTimeout(() => {
+            modelViewer.getAnimations().forEach(anim => anim.play());
+            // Forces canvas layout refresh
+            modelViewer.style.width = '100%';
+          }, 10);
+        }
+      }
+    }
+  </script>
 
 </body>
-
 </html>
