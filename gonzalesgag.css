@@ -207,3 +207,19 @@ display: none !important;
 .gallery-blurb .scroll-content::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.05);
 }
+/* Keeps 'About Me' text centered and safely clear of the halftone fade zones */
+#about-view .halftone-box p,
+#about-view .halftone-box h2 {
+  padding-left: 120px;
+  padding-right: 120px;
+  box-sizing: border-box;
+}
+
+/* On small mobile screens, reduce padding so the text doesn't get squished */
+@media (max-width: 600px) {
+  #about-view .halftone-box p,
+  #about-view .halftone-box h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
